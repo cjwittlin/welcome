@@ -21,10 +21,87 @@ header {
   font-size: 35px;
   color: white;
 }
-  </style>
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #6666ff;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #ccccff;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #0000e6;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
 <body>
+
+<h2>Hello Kitty</h2>
+<p>In this example, we have created a cat, two catnips and a cat bed. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="https://cjwittlin.github.io/welcome/html">Kitty Hello</a></li>
+      <li><a href="https://cjwittlin.github.io/welcome/about">Second</a></li>
+      <li><a href="https://cjwittlin.github.io/welcome/html#">Tokitty</a></li>
+    </ul>
+  </nav>
   
+  <article>
+    <h1>London</h1>
+    <p>London is the cat of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million rats.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its feeing by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
+
 <h1>Hello</h1> 
 <a href="https://cjwittlin.github.io/welcome/about">second</a>
 <p>nice to have you here<p>
